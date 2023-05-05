@@ -27,7 +27,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           {...props}
         />
-        {error ? <p>{error}</p> : null}
+        {error ? (
+          <p className="mt-2 text-destructive text-xs">{error}</p>
+        ) : null}
       </div>
     );
   }
